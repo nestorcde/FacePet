@@ -1,15 +1,20 @@
-package py.com.prestosoftware.facepet;
+package py.com.prestosoftware.facepet.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import py.com.prestosoftware.facepet.R;
+import py.com.prestosoftware.facepet.ui.users.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         Log.d(TAG, "onRestart");
+    }
+
+    @OnClick(R.id.btnIrLogin)
+    public void goToLoginActivity(){
+        startActivity(new Intent(this,LoginActivity.class));
     }
 
 

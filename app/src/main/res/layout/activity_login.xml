@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_16dp"
+    tools:context=".ui.users.login.LoginActivity">
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_16dp"
+        android:text="Login"
+        tools:layout_marginBottom="@dimen/margin_8dp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite su Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite su Clave"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INGRESAR" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No posee una cuenta.?" />
+
+        <TextView
+            android:id="@+id/txtRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/txtCuenta"
+            android:gravity="center"
+            android:text="Registrarse" />
+
+    </RelativeLayout>
+</LinearLayout>
